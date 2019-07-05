@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/mainlinaerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/defaultscreen"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnpay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button_pay_background"
+            android:text="Pay"
+            android:onClick="PayPrice"
+            android:textColor="@android:color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <com.github.captain_miao.optroundcardview.OptRoundCardView
+        android:id="@+id/firstlayout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/mainlinaerlayout"
+        app:layout_constraintEnd_toEndOf="@id/mainlinaerlayout"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/mainlinaerlayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="85"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="   Redeem"
+                        android:textSize="15dp"
+                        android:textStyle="normal"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_close_24"
+                        android:layout_weight="15"
+                        android:onClick="exitpage"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5A5A5A"></RelativeLayout>
+                <include layout="@layout/header"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:text="OTP will be sent to the merchant,who share the redemotion code with you"/>
+                <EditText
+                    android:id="@+id/billAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:hint="Enter Bill Amount"
+                    android:inputType="number"
+                    android:background="@drawable/border"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="70dp"
+                    android:background="#A8000000">
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnpayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/button_pay_background"
+                    android:text="Get otp"
+                    android:onClick="paymentPage"
+                    android:textColor="@android:color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+    <com.github.captain_miao.optroundcardview.OptRoundCardView
+        android:id="@+id/secondlayout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/mainlinaerlayout"
+        app:layout_constraintEnd_toEndOf="@id/mainlinaerlayout"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/mainlinaerlayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="85"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="   Redeem"
+                        android:textSize="15dp"
+                        android:textStyle="normal"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_close_24"
+                        android:layout_weight="15"
+                        android:onClick="exitpage"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5A5A5A"></RelativeLayout>
+                <include layout="@layout/header"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:text="OTP will be sent to the merchant,who share the redemotion code with you"/>
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="20dp"
+                    android:text="Amount: \t"
+                    android:textColor="#000"
+                    android:gravity="center_horizontal"
+
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp" />
+                <EditText
+                    android:id="@+id/otpnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:hint="Enter OTP"
+                    android:inputType="number"
+                    android:background="@drawable/border"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#A8000000">
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="25dp"
+
+                    android:background="@drawable/button_pay_background"
+                    android:text="submit"
+                    android:onClick="submit"
+                    android:textColor="@android:color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+    <com.github.captain_miao.optroundcardview.OptRoundCardView
+        android:id="@+id/thirdlayout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/mainlinaerlayout"
+        app:layout_constraintEnd_toEndOf="@id/mainlinaerlayout"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/mainlinaerlayout"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="85"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="   Redeem"
+                        android:textSize="15dp"
+                        android:textStyle="normal"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_close_24"
+                        android:layout_weight="15"
+                        android:onClick="exitpage"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5A5A5A"></RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:src="@drawable/congratulations"
+                    android:scaleType="fitXY"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:text="You've successfully redeemed your code!"
+                    android:textSize="10dp"
+                    android:textStyle="italic"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="100dp"
+                    android:background="#A8000000">
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+
+                    android:background="@drawable/button_pay_background"
+                    android:text="okay"
+                    android:onClick="exitpage"
+                    android:textColor="@android:color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+    <com.github.captain_miao.optroundcardview.OptRoundCardView
+        android:id="@+id/walletfirstlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/mainlinaerlayout"
+        app:layout_constraintEnd_toEndOf="@id/mainlinaerlayout"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/mainlinaerlayout"
+        android:paddingBottom="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="85"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="   Redeem"
+                        android:textSize="15dp"
+                        android:textStyle="normal"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_close_24"
+                        android:layout_weight="15"
+                        android:onClick="exitpage"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#5A5A5A"></RelativeLayout>
+
+
+                <include layout="@layout/header"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="15dp"
+                   android:layout_marginStart="20dp"
+                   android:layout_marginEnd="20dp"
+                   android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Option to pay"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+                   <TextView
+                       android:id="@+id/txtamount"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="500"
+                       android:gravity="end"
+                       android:textSize="15dp"
+                       android:textStyle="bold"/>
+               </LinearLayout>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+                    <RadioButton
+                        android:id="@+id/cashradio"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cash"
+
+                        android:textStyle="normal"
+                        android:textSize="20dp"
+                        android:onClick="getotp"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#A8000000">
+                    </RelativeLayout>
+                    <RadioButton
+                        android:id="@+id/Toneradio"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ToneTag"
+                        android:textStyle="normal"
+                        android:textSize="20dp"
+                        android:onClick="ToneTagPage"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#A8000000">
+                    </RelativeLayout>
+                    <RadioButton
+                        android:id="@+id/debitradio"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Debit"
+                        android:textStyle="normal"
+                        android:textSize="20dp"
+                        android:onClick="debitPage"
+                        />
+
+                <include android:id="@+id/debitcard"
+                    android:visibility="gone"
+                    layout="@layout/card_layout"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#A8000000">
+                    </RelativeLayout>
+
+                    <RadioButton
+                        android:id="@+id/creditradio"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Credit"
+                        android:textStyle="normal"
+                        android:textSize="20dp"
+                        android:onClick="CreditPage"
+                        />
+                <include android:id="@+id/crebitcard"
+                    android:visibility="gone"
+                    layout="@layout/card_layout"/>
+
+                </RadioGroup>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="40dp"
+                    android:background="#A8000000">
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_pay_background"
+                    android:text="Pay money"
+                    android:onClick="getotp"
+                    android:textColor="@android:color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+    <com.github.captain_miao.optroundcardview.OptRoundCardView
+        android:id="@+id/waitinglayout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/mainlinaerlayout"
+        app:layout_constraintEnd_toEndOf="@id/mainlinaerlayout"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/mainlinaerlayout"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:id="@+id/loading"
+                android:src="@drawable/loading" />
+            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:elevation="0dp"-->
+
+                <!--android:layout_marginStart="140dp"-->
+                <!--android:layout_marginEnd="160dp"-->
+                <!--android:layout_marginTop="150dp"-->
+                <!--android:layout_marginBottom="80dp"-->
+                <!--android:src="@drawable/ic_launcher_background"-->
+
+
+                <!--/>-->
+            <!--<Button-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_marginStart="30dp"-->
+
+                <!--android:layout_marginEnd="30dp"-->
+                <!--android:background="@drawable/button_pay_background"-->
+                <!--android:text="next"-->
+                <!--android:onClick="detailpage"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="15dp"-->
+                <!--android:textStyle="bold" />-->
+        </LinearLayout>
+
+    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+    <com.github.captain_miao.optroundcardview.OptRoundCardView
+        android:id="@+id/detaillayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/mainlinaerlayout"
+        app:layout_constraintEnd_toEndOf="@id/mainlinaerlayout"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/mainlinaerlayout"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="85"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="   Redeem"
+                    android:textSize="15dp"
+                    android:textStyle="normal"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_close_24"
+                    android:layout_weight="15"
+                    android:onClick="exitpage"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/hiddendetaial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#5A5A5A"></RelativeLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="340dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_pay_background"
+                android:onClick="AddOn"
+                android:text="Add price to card"
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+    <com.github.captain_miao.optroundcardview.OptRoundCardView
+        android:id="@+id/chooselayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/mainlinaerlayout"
+        app:layout_constraintEnd_toEndOf="@id/mainlinaerlayout"
+        android:background="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/mainlinaerlayout"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="85"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="   Redeem"
+                    android:textSize="15dp"
+                    android:textStyle="normal"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_close_24"
+                    android:layout_weight="15"
+                    android:onClick="exitpage"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#5A5A5A"></RelativeLayout>
+            <include layout="@layout/header"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose Payment method"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Debit"
+                    android:textStyle="normal"
+                    android:textSize="20dp"
+                    android:onClick="debitPage1"
+                    />
+
+                <include android:id="@+id/debitcard1"
+                    android:visibility="gone"
+                    layout="@layout/card_layout"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#A8000000">
+                </RelativeLayout>
+
+                <RadioButton
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Credit"
+                    android:textStyle="normal"
+                    android:textSize="20dp"
+                    android:onClick="CrebitPage1"
+                    />
+                <include android:id="@+id/crebitcard1"
+                    android:visibility="gone"
+                    layout="@layout/card_layout"/>
+
+            </RadioGroup>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/button_pay_background"
+                android:onClick="getotp"
+                android:text="Payment"
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+</android.support.constraint.ConstraintLayout>

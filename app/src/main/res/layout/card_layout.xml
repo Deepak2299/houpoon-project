@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:padding="20dp"
+    android:background="@drawable/card_background">
+    <TextView
+        android:id="@+id/txtcardname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card Name"
+        android:layout_alignParentLeft="true"
+        />
+    <EditText
+        android:id="@+id/edtcardname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtcardname"
+        android:layout_alignParentLeft="true"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/card_edittext_view"
+
+
+        />
+    <TextView
+        android:id="@+id/txtexpirydate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Expiry Date"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/edtcardname"
+        android:layout_toLeftOf="@id/txtcvv"/>
+    <TextView
+        android:id="@+id/txtcvv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+
+        android:text="CVV"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/edtcardname"
+
+        />
+    <EditText
+        android:id="@+id/edtexpirydate"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtexpirydate"
+        android:layout_alignParentLeft="true"
+        android:inputType="date"
+
+        android:background="@drawable/card_edittext_view"
+        android:hint="MM/YY"
+
+
+
+
+        />
+    <EditText
+        android:id="@+id/edtcvv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtcvv"
+        android:layout_marginEnd="25dp"
+
+
+        android:layout_alignParentRight="true"
+
+
+        android:background="@drawable/card_edittext_view"
+        android:inputType="numberDecimal"
+        android:maxLength="3"
+
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtexpirydate"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/txtCheckbox"
+
+        />
+
+    <TextView
+        android:id="@+id/txtCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtexpirydate"
+        android:layout_alignParentRight="true"
+
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="86dp"
+        android:text="Save this card for future payment" />
+
+</RelativeLayout>
